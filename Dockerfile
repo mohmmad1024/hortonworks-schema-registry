@@ -25,7 +25,7 @@ RUN chmod +x /opt/hortonworks-registry/entrypoint.sh && \
     chmod +x /opt/hortonworks-registry/wait-for-it.sh && \
     chown -R hortonworks:hortonworks /opt/hortonworks-registry-0.5.1
 
-RUN /opt/hortonworks-registry/bootstrap/bootstrap-storage.sh check-connection
+RUN exit 0 && /opt/hortonworks-registry/bootstrap/bootstrap-storage.sh check-connection
 	
 ENV DB_NAME schema_registry
 ENV DB_USER registry_user
