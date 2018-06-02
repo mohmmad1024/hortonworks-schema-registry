@@ -3,7 +3,7 @@ version: '2'
 services:
 
   db:
-    image: mariadb:10.0.34
+    image: mysql
     ports:
       - "3307:3306"
 #    volumes:
@@ -19,7 +19,6 @@ services:
       MYSQL_PASSWORD: password
   registry:
     image: mohmmad1024/schema-registry
-    build: .
     depends_on:
       - db
     ports:
