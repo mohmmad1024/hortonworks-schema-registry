@@ -56,43 +56,12 @@ http://localhost:9090/api/swagger
 
 ## Example Docker Compose
 
-```yaml
-version: '2'
-
-services:
-
-  db:
-    image: mysql:5.7.17
-    ports:
-      - "3307:3306"
-    volumes:
-      - 'mysqldb_data:/var/lib/mysql'
-    networks:
-      default:
-        aliases:
-          - db
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: hortonworks
-      MYSQL_USER: hortonworks
-      MYSQL_PASSWORD: password
-
-
-  registry:
-    image: thebookpeople/hortonworks-registry:latest
-    depends_on:
-      - db
-    ports:
-      - "9090:9090"
-    environment:
-      DB_NAME: hortonworks
-      DB_USER: hortonworks
-      DB_PASSWORD: password
-      DB_PORT: 3306
-      DB_HOST: db
-
-
-volumes:
-  mysqldb_data:
-    driver: local
 ```
+git clone https://github.com/mohmmad1024/hortonworks-schema-registry.git
+cd hortonworks-schema-registry
+```
+then run the docker-compose.yml example 
+```
+docker-compose up -d
+```
+or just [![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/mohmmad1024/hortonworks-schema-registry/master/docker-compose.yml)
