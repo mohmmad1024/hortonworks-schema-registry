@@ -65,3 +65,7 @@ then run the docker-compose.yml example
 docker-compose up -d
 ```
 or just [![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/mohmmad1024/hortonworks-schema-registry/master/docker-compose.yml)
+```
+/api/v1/schemaregistry/schemas/{name}/versions/latest
+
+```
