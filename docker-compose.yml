@@ -18,7 +18,7 @@ services:
       MYSQL_USER: hortonworks
       MYSQL_PASSWORD: password
   registry:
-    image: hortonworks-registry
+    image: mohmmad1024/hortonworks-registry
     build: .
     depends_on:
       - db
